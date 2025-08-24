@@ -1,0 +1,396 @@
+/* style.css */
+:root {
+    --color-primary: #1a56db; /* A professional blue */
+    --color-primary-dark: #1e429f;
+    --color-secondary: #333333;
+    --color-accent: #ffd700; /* Gold accent */
+    --color-light: #f3f4f6;
+    --color-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--color-secondary);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+.nav-logo {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--color-primary);
+}
+
+/* Hero Section (Homepage) */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Creates a cool parallax effect */
+    color: var(--color-white);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 60px; /* Offset for fixed nav */
+}
+
+.hero-container {
+    width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+/* Buttons */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-3px);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+}
+.cta-button-secondary:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+}
+
+/* Sections General */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-primary);
+}
+
+/* Courses Preview (Homepage) */
+.courses-preview {
+    background-color: var(--color-light);
+    padding: 5rem 0;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.course-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.view-all-button {
+    text-align: center;
+    display: block;
+    color: var(--color-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* About Section (Homepage) */
+.about {
+    padding: 5rem 0;
+}
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.about-content h3 {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+/* Final CTA */
+.cta {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    padding: 3rem 0 1rem;
+    text-align: center;
+}
+
+.footer-info {
+    margin-bottom: 2rem;
+}
+
+/* === INNER PAGE STYLES === */
+
+/* Page Header for Courses, About, Contact */
+.page-hero {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 6rem 0 3rem;
+    margin-top: 60px; /* Offset for fixed nav */
+}
+
+/* COURSES PAGE STYLES */
+.all-courses {
+    padding: 4rem 0;
+}
+
+.course-category {
+    margin-bottom: 4rem;
+}
+
+.course-category h2 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-light);
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.detailed-course-card {
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+.detailed-course-card:hover {
+    transform: translateY(-3px);
+}
+
+/* ABOUT PAGE STYLES */
+.mission {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: var(--color-light);
+}
+
+.mission-statement {
+    font-size: 1.3rem;
+    font-style: italic;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.director-profile {
+    padding: 4rem 0;
+}
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile-title {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.expertise {
+    margin-top: 2rem;
+}
+
+.expertise ul {
+    list-style-position: inside;
+    margin-top: 0.5rem;
+}
+
+.expertise li {
+    margin-bottom: 0.5rem;
+}
+
+.philosophy {
+    padding: 4rem 0;
+    background-color: var(--color-light);
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    transition: transform 0.3s;
+}
+
+.philosophy-item {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    
+}
+
+/* CONTACT PAGE STYLES */
+.contact-section {
+    padding: 4rem 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-info h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.contact-detail {
+    margin-bottom: 2rem;
+}
+
+.contact-detail h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-secondary);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.map-section {
+    padding: 2rem 0 4rem;
+}
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
