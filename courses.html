@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-barba="wrapper">
+    <div id="scroll-progress-bar"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-outline"></div>
+
     <nav class="navbar">
         <div class="nav-container">
             <h1 class="nav-logo">Harvard Computer Classes</h1>
@@ -20,95 +24,97 @@
         </div>
     </nav>
 
-    <section class="page-hero">
-        <div class="container">
-            <h1>Our Comprehensive Curriculum</h1>
-            <p>Designed for beginners and advanced learners alike. Start your journey today.</p>
-        </div>
-    </section>
+    <main data-barba="container" data-barba-namespace="courses">
+        <section class="page-hero">
+            <div class="container">
+                <h1>Our Comprehensive Curriculum</h1>
+                <p>Designed for beginners and advanced learners alike. Start your journey today.</p>
+            </div>
+        </section>
 
-    <section class="all-courses">
-        <div class="container">
-            <div class="course-category">
-                <h2>Programming & Development</h2>
-                <div class="course-list">
-                    <div class="detailed-course-card">
-                        <h3>Python Programming</h3>
-                        <p><strong>Level:</strong> Beginner to Advanced</p>
-                        <p><strong>Duration:</strong> 8 Weeks</p>
-                        <p>Learn the fundamentals of Python, data structures, OOP, and build real-world applications.</p>
-                    </div>
-                    <div class="detailed-course-card">
-                        <h3>Java</h3>
-                        <p><strong>Level:</strong> Intermediate</p>
-                        <p><strong>Duration:</strong> 10 Weeks</p>
-                        <p>Master Java programming, Spring framework, and enterprise application development.</p>
-                    </div>
-                    <div class="detailed-course-card">
-                        <h3>C & C++</h3>
-                        <p><strong>Level:</strong> Beginner to Intermediate</p>
-                        <p><strong>Duration:</strong> 8 Weeks</p>
-                        <p>Understand the core concepts of memory management, pointers, and object-oriented programming in C++.</p>
-                    </div>
-                    <div class="detailed-course-card">
-                        <h3>Full-Stack Web Development</h3>
-                        <p><strong>Level:</strong> Beginner to Advanced</p>
-                        <p><strong>Duration:</strong> 12 Weeks</p>
-                        <p>Front-end (HTML, CSS, JS, React) + Back-end (Node.js, Databases). Become a job-ready developer.</p>
+        <section class="all-courses">
+            <div class="container">
+                <div class="course-category">
+                    <h2>Programming & Development</h2>
+                    <div class="course-list">
+                        <div class="detailed-course-card">
+                            <h3>Python Programming</h3>
+                            <p><strong>Level:</strong> Beginner to Advanced</p>
+                            <p><strong>Duration:</strong> 8 Weeks</p>
+                            <p>Learn the fundamentals of Python, data structures, OOP, and build real-world applications.</p>
+                        </div>
+                        <div class="detailed-course-card">
+                            <h3>Java</h3>
+                            <p><strong>Level:</strong> Intermediate</p>
+                            <p><strong>Duration:</strong> 10 Weeks</p>
+                            <p>Master Java programming, Spring framework, and enterprise application development.</p>
+                        </div>
+                        <div class="detailed-course-card">
+                            <h3>C & C++</h3>
+                            <p><strong>Level:</strong> Beginner to Intermediate</p>
+                            <p><strong>Duration:</strong> 8 Weeks</p>
+                            <p>Understand the core concepts of memory management, pointers, and object-oriented programming in C++.</p>
+                        </div>
+                        <div class="detailed-course-card">
+                            <h3>Full-Stack Web Development</h3>
+                            <p><strong>Level:</strong> Beginner to Advanced</p>
+                            <p><strong>Duration:</strong> 12 Weeks</p>
+                            <p>Front-end (HTML, CSS, JS, React) + Back-end (Node.js, Databases). Become a job-ready developer.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="course-category">
-                <h2>Design & Multimedia</h2>
-                <div class="course-list">
-                    <div class="detailed-course-card">
-                        <h3>Graphic Design (CorelDraw, Photoshop, GIMP)</h3>
-                        <p><strong>Level:</strong> All Levels</p>
-                        <p><strong>Duration:</strong> 6 Weeks</p>
-                        <p>Create logos, brochures, social media graphics, and master photo editing techniques.</p>
+                <div class="course-category">
+                    <h2>Design & Multimedia</h2>
+                    <div class="course-list">
+                        <div class="detailed-course-card">
+                            <h3>Graphic Design (CorelDraw, Photoshop, GIMP)</h3>
+                            <p><strong>Level:</strong> All Levels</p>
+                            <p><strong>Duration:</strong> 6 Weeks</p>
+                            <p>Create logos, brochures, social media graphics, and master photo editing techniques.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="course-category">
-                <h2>Networking & Infrastructure</h2>
-                <div class="course-list">
-                    <div class="detailed-course-card">
-                        <h3>Computer Networking</h3>
-                        <p><strong>Level:</strong> Intermediate</p>
-                        <p><strong>Duration:</strong> 8 Weeks</p>
-                        <p>Learn about network configurations, protocols, security, and troubleshooting.</p>
+                <div class="course-category">
+                    <h2>Networking & Infrastructure</h2>
+                    <div class="course-list">
+                        <div class="detailed-course-card">
+                            <h3>Computer Networking</h3>
+                            <p><strong>Level:</strong> Intermediate</p>
+                            <p><strong>Duration:</strong> 8 Weeks</p>
+                            <p>Learn about network configurations, protocols, security, and troubleshooting.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="course-category">
-                <h2>Business & Foundational Skills</h2>
-                <div class="course-list">
-                    <div class="detailed-course-card">
-                        <h3>Microsoft Office</h3>
-                        <p><strong>Level:</strong> All Levels</p>
-                        <p><strong>Duration:</strong> 4 Weeks</p>
-                        <p>Master Word, Excel, and PowerPoint for professional document creation and data management.</p>
-                    </div>
-                    <div class="detailed-course-card">
-                        <h3>Tally Prime</h3>
-                        <p><strong>Level:</strong> Beginner to Intermediate</p>
-                        <p><strong>Duration:</strong> 6 Weeks</p>
-                        <p>Gain expertise in the leading accounting software for managing business finances and GST.</p>
-                    </div>
-                    <div class="detailed-course-card">
-                        <h3>Introduction to Basic Computers</h3>
-                        <p><strong>Level:</strong> Absolute Beginner</p>
-                        <p><strong>Duration:</strong> 3 Weeks</p>
-                        <p>Learn the essentials of computer operation, internet browsing, email, and basic software usage.</p>
+                <div class="course-category">
+                    <h2>Business & Foundational Skills</h2>
+                    <div class="course-list">
+                        <div class="detailed-course-card">
+                            <h3>Microsoft Office</h3>
+                            <p><strong>Level:</strong> All Levels</p>
+                            <p><strong>Duration:</strong> 4 Weeks</p>
+                            <p>Master Word, Excel, and PowerPoint for professional document creation and data management.</p>
+                        </div>
+                        <div class="detailed-course-card">
+                            <h3>Tally Prime</h3>
+                            <p><strong>Level:</strong> Beginner to Intermediate</p>
+                            <p><strong>Duration:</strong> 6 Weeks</p>
+                            <p>Gain expertise in the leading accounting software for managing business finances and GST.</p>
+                        </div>
+                        <div class="detailed-course-card">
+                            <h3>Introduction to Basic Computers</h3>
+                            <p><strong>Level:</strong> Absolute Beginner</p>
+                            <p><strong>Duration:</strong> 3 Weeks</p>
+                            <p>Learn the essentials of computer operation, internet browsing, email, and basic software usage.</p>
+                        </div>
                     </div>
                 </div>
+                
             </div>
-            
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -123,5 +129,9 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>
