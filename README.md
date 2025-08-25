@@ -8,9 +8,7 @@ This repository contains the complete source code for the Harvard Computer Class
 
 ## 🚀 Live Demo
 
-**[Link to your live website here]**
-
-**(Note: Replace the link above with your actual deployed website URL from Netlify, Vercel, or GitHub Pages.)**
+**https://harvardcomputercenter.netlify.app/**
 
 ---
 
