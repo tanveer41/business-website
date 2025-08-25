@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return gsap.to(data.current.container, {
                     opacity: 0,
                     y: -50,
-                    duration: 0.25
+                    duration: 0.20
                 });
             },
             enter(data) {
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return gsap.from(data.next.container, {
                     opacity: 0,
                     y: 50,
-                    duration: 0.25
+                    duration: 0.20
                 });
             }
         }]
